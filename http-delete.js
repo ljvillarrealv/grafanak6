@@ -1,4 +1,4 @@
-import http from 'k6/http';
+import http from 'k6/http';k6 run --out prometheus test.js
 import { check } from 'k6';
 import { randomIntBetween } from 'https://jslib.k6.io/k6-utils/1.2.0/index.js';
 import { randomString } from 'https://jslib.k6.io/k6-utils/1.2.0/index.js';
@@ -18,7 +18,7 @@ export const options = {
         },
         {
             duration: '10s',  // Segunda etapa: dura 20 segundos.
-            target: 10        // En esta etapa, el número de VUs se mantiene constante en 10.
+            target: 20        // En esta etapa, el número de VUs se mantiene constante en 10.
         },
         {                       //Ramp -Down
             duration: '5s',  // Tercera etapa: dura 10 segundos.
@@ -64,7 +64,9 @@ export default function () {
         ),
         {
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+
             }
         }
     );

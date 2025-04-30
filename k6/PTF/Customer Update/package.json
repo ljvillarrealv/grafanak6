@@ -1,0 +1,15 @@
+{
+  "name": "customer-update",
+  "version": "1.0.0",
+  "main": "1_Update_customer_contact_info.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "k6-html-reporter": "^1.0.5"
+  }
+}
